@@ -4,16 +4,20 @@ This is a simple console-based simulation of a toy robot moving on a tabletop.
 
 ## How to Run the Project
 
-1.  **Open a terminal** (Command Prompt, PowerShell, or any other terminal).
-2.  **Navigate to the project directory**:
+1.  **Clone the repository** to your local machine:
     ```sh
-    cd "C:\Users\Maurya Gamage\Desktop\c# projects"
+    git clone <repository-url>
     ```
-3.  **Run the application** using the .NET CLI:
+2.  **Open a terminal** (Command Prompt, PowerShell, or any other terminal).
+3.  **Navigate to the project directory**:
+    ```sh
+    cd <directory-where-you-cloned-the-repo>
+    ```
+4.  **Run the application** using the .NET CLI:
     ```sh
     dotnet run
     ```
-4.  The application will first ask you to define the width and height of the tabletop.
+5.  The application will first ask you to define the width and height of the tabletop.
 
 ## Commands
 
