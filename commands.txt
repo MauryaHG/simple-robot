@@ -1,0 +1,26 @@
+# --- Initial commands without map ---
+PLACE 0,0,NORTH
+MOVE
+REPORT
+LEFT
+REPORT
+
+# --- Place in a new location ---
+PLACE 1,2,EAST
+MOVE
+MOVE
+REPORT
+
+# --- Enable the map and run commands ---
+ENABLE MAP 1
+MOVE
+REPORT
+RIGHT
+MOVE
+REPORT
+
+# --- Disable the map and run final commands ---
+ENABLE MAP 0
+MOVE
+REPORT
+exit

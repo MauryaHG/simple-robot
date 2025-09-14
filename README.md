@@ -19,6 +19,59 @@ This is a simple console-based simulation of a toy robot moving on a tabletop.
     ```
 5.  The application will first ask you to define the width and height of the tabletop.
 
+## Running with a Command File
+
+You can also run the application with a file containing a list of commands. This is useful for testing or for demonstrating the application.
+
+1.  **Create a file** (e.g., `commands.txt`) with a list of commands, one per line.
+2.  **Run the application** and redirect the input from the file:
+    ```sh
+    dotnet run < commands.txt
+    ```
+
+### Sample `commands.txt`
+
+```
+# --- Initial commands without map ---
+PLACE 0,0,NORTH
+MOVE
+REPORT
+# Expected output: Output: 0,1,NORTH
+
+LEFT
+REPORT
+# Expected output: Output: 0,1,WEST
+
+# --- Place in a new location ---
+PLACE 1,2,EAST
+MOVE
+MOVE
+REPORT
+# Expected output: Output: 3,2,EAST
+
+# --- Enable the map and run commands ---
+ENABLE MAP 1
+MOVE
+REPORT
+# Expected output: Output: 4,2,EAST
+# (Map will be displayed after this)
+
+RIGHT
+MOVE
+REPORT
+# Expected output: Output: 4,1,SOUTH
+# (Map will be displayed after this)
+
+# --- Disable the map and run final commands ---
+ENABLE MAP 0
+MOVE
+REPORT
+# Expected output: Output: 4,0,SOUTH
+# (Map will not be displayed after this)
+
+exit
+```
+
 ## Commands
 
 The following commands are available to control the robot:
